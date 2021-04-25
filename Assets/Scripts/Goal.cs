@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Collider2D))]
 public class Goal : MonoBehaviour
@@ -14,6 +15,6 @@ public class Goal : MonoBehaviour
     {
 
         Destroy(other.gameObject);
-        GameManager.instance.RestartGame(2.5f);
+        GameManager.instance.GameOver("KAMU MENANG", "Kamu Mendapat Emas Gelap");
     }
 }

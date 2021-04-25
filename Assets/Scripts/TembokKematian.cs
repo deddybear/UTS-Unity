@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class TembokKematian : MonoBehaviour
 {
-    
 
     // Start is called before the first frame update
     void Start()
@@ -22,17 +23,17 @@ public class TembokKematian : MonoBehaviour
     {
         if (coll.transform.tag == "Player")
         {
-            GameManager.instance.RestartGame(2f);
+            GameManager.instance.GameOver("YOU LOSE !", "Kamu Menabrak diding kematian");
         }
         else
         {
             if (transform.parent != null)
             {
-                GameManager.instance.RestartGame(2f);
+                GameManager.instance.GameOver("YOU LOSE !", "Kamu Menabrak diding kematian");
             }
             else
             {
-               GameManager.instance.RestartGame(2f);
+               GameManager.instance.GameOver("YOU LOSE !", "Kamu Menabrak diding kematian");
             }
         }
     }
